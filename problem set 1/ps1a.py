@@ -170,19 +170,3 @@ def compare_cow_transport_algorithms():
     print(f"Time for brute force algorithm: {x}. Number of trips: {len(test)}")
 
 compare_cow_transport_algorithms()
-'''The greedy algorithm ran a lot faster had a lot less operations to do. The main thing that 
-caused the brute force to be slow was enumerating all the different possibilities that were 
-largely not useful, example the extremes with each cow being on a different trip and all cows 
-being on one trip. 
-
-The greedy algorithm does not return the optimal solution. It gave 6 instead of 5 from the brute
-force. It does so because it finds a locally optimal solution instead of the globally optimal 
-solution. 
-
-The brute force does return the optimal solution as it considers all the possible solutions 
-to send the cows into space, thus, it will arrive at the best solution. 
-
-ps: I am half assing this part of the problem set because im lazy with explanations. If this 
-was an actual uni module that I took, then I certainly would have given it more than a 5 min
-effort'''
-
