@@ -44,11 +44,6 @@ def dp_make_weight(egg_weights, target_weight, memo = {}):
 
 
 
-
-
-
-
-
 def brute_force(egg_weights, target_weight, memo = {}):
     '''using brute force and no dynamic programming. '''
 # EXAMPLE TESTING CODE, feel free to add more if you'd like
@@ -60,20 +55,3 @@ if __name__ == '__main__':
     print("Expected ouput: 9 (3 * 25 + 2 * 10 + 4 * 1 = 99)")
     print("Actual output:", dp_make_weight(egg_weights, n))
     print()
-
-''' why it would be difficult to use a brute force algorithm with 30 different egg weights?
-It is hard as for every egg weight, it would have to find a solution to it depending on the size
-of the target weight. This means that the computer would have to solve every target weight value 
-that is lower than the target weight all the way to the zero value, giving it an exponential worse
-case scenario growth. Hence, as the number of eggs grow, the number of operations grow so exponentially 
-that without dynamic programming, the programme efficiency would be very low'''
-
-'''implement a greedy algorithm.
-objective function would be to find the least number of eggs. The constraints would be the target weight.
-The greedy algorithm would take the largest value and minus it from the target weight and continue to do
-so until it is unable to, and then checks the remaining eggs values and then continue the same process. 
-'''
-
-'''no it would not always give the optimal solution. eggs = 15,6,1. target weight = 20
-solution would pick 15 first then 5 of 1 giving 6. brute force givies 3 of 6 and 2 of 1, giving a total 
-of 1.'''
